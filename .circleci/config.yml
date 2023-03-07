@@ -3,13 +3,13 @@ orbs:
 node: circleci/node@4.1.0
 aws-cli: circleci/aws-cli@1.3.1
 jobs:
-build:
- docker:
-   - image: "cimg/node:14.15"
- steps:
-   - node/install
-   - checkout
-   - run:
+ build:
+  docker:
+    - image: "cimg/node:14.15"
+  steps:
+    - node/install
+    - checkout
+  - run:
        name: Front-End Install
        command: |
          npm run frontend:install
